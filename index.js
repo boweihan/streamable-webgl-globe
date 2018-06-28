@@ -15,7 +15,7 @@ if (!Detector.webgl) {
     setTimeout(function() {
       for (var i = 0; i < 100; i++) {
         globeData = {
-          color: '#39ff14',
+          color: '#' + Math.floor(Math.random() * 16777215).toString(16),
           lat: Math.random() * 180 - 90,
           lon: Math.random() * 360 - 180,
           size: 0.5,
