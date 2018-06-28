@@ -11,15 +11,18 @@ if (!Detector.webgl) {
   globe.init();
 
   var drawBlock = function() {
-    globeData = {
-      color: '#39ff14',
-      lat: Math.random() * 180 - 90,
-      lon: Math.random() * 360 - 180,
-      size: 0.5,
-      magnitude: Math.random() * 200,
-    };
+    globe.removeAllBlocks();
     setTimeout(function() {
-      globe.addLevitatingBlock(globeData);
+      for (var i = 0; i < 100; i++) {
+        globeData = {
+          color: '#39ff14',
+          lat: Math.random() * 180 - 90,
+          lon: Math.random() * 360 - 180,
+          size: 0.5,
+          magnitude: Math.random() * 200,
+        };
+        globe.addLevitatingBlock(globeData);
+      }
     }, 300);
   };
   setInterval(drawBlock, 300);
