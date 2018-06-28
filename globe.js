@@ -264,9 +264,9 @@ var Globe = function Globe(container, urls) {
   var checkAltituteBoundries = function() {
     // max zoom
     if (distanceTarget < 300) distanceTarget = 300;
-    else if (distanceTarget > 900)
+    else if (distanceTarget > 1100)
       // min zoom
-      distanceTarget = 900;
+      distanceTarget = 1100;
   };
 
   var animate = function() {
